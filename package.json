@@ -1,0 +1,9 @@
+{
+  "name": "scriptvetter",
+  "title": "Script Vetter",
+  "id": "jid1-E7TE2pmJSXyKwg",
+  "description": "Allows whitelisting javascript by content hash.",
+  "author": "",
+  "license": "WTFPL",
+  "version": "0.1"
+}

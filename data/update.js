@@ -1,17 +1,25 @@
 (function() {
 
 var template;
-var T = document.createTextNode;
-var E = document.createElement;
-
-var template = document.getElementById('template');
-var table = template.parentNode;
-table.removeChild(template);
-var odd = false;
+var table;
+var odd;
+var T;
+var E;
+var header;
 
 self.port.on("show",function(e) {
-    while(table.firstChild.nextSibling) {
-        table.removeChild(table.firstChild.nextSibing);
+    if(!template) {
+        T = document.createTextNode;
+        E = document.createElement;
+
+        header = document.getElementById('head');
+        template = document.getElementById('template');
+        table = template.parentNode;
+        table.removeChild(template);
+        odd = false;
+    } else {
+        table.innerHTML = "";
+        table.appendChild(header);
     }
     var addRow = function(id, url, source, enabled) {
         var snippet = source.substr(0,20);

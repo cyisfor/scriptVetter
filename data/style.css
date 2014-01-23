@@ -1,6 +1,6 @@
 body { 
     color: #000000; 
 }
-tr.head { background: #CCCCFF; }
+tr#head { background: #CCCCFF; }
 tr.odd { background: #DDDDDD; }
 tr.even { background: #FFFFFF; }

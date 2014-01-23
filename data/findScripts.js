@@ -4,7 +4,7 @@ self.on("re-enable",function(which) {
     reEnablers[which]();
 });
 
-document.addEventListener('DOMContentLoaded',function() {
+self.on("ready", function() {
     var scripts = document.getElementsByTagName('script');
     reEnablers = new Array(scripts.length);
     for(var which=0;which<scripts.length;++which) {
@@ -35,4 +35,4 @@ document.addEventListener('DOMContentLoaded',function() {
             }
         }
     }
-}
+},true);
